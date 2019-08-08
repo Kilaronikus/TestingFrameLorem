@@ -42,8 +42,11 @@ namespace AuroTest0
         public IWebElement PleaseDontPublishMyName_button { get; set; }
         [FindsBy(How = How.XPath, Using = "//button[@class = 'button']")]
         public IWebElement Submit_button { get; set; }
-        [FindsBy(How = How.XPath, Using = "//a[@href=\"Homepage\"")]
+        [FindsBy(How = How.XPath, Using = "//a[@href='Homepage']")]
         public IWebElement Home { get; set; }
+        [FindsBy(How = How.XPath, Using = "//div[@class='input-error-message'][contains(text(),'Name')]")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='input-error-message'][contains(text(),'Email address')]")]
+        public IWebElement InputError { get; set; }
         public void GoToDoYouHaveAStory_page()
         {
             News.Click();
